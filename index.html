@@ -16,23 +16,23 @@
 
 <div style="display: flex; justify-content: space-around;">
     <div style="text-align: center;">
-        <img src="/Users/karolinakulis/Desktop/uro/closed.jpeg" alt="Pudełko nr 1" width="150" onclick="revealGift(1)">
+        <img src="closed.jpeg" alt="Pudełko nr 1" width="150" onclick="revealGift(1)">
         <p>Pudełko nr 1</p>
     </div>
     <div style="text-align: center;">
-        <img src="/Users/karolinakulis/Desktop/uro/closed.jpeg" alt="Pudełko nr 2" width="150" onclick="revealGift(2)">
+        <img src="closed.jpeg" alt="Pudełko nr 2" width="150" onclick="revealGift(2)">
         <p>Pudełko nr 2</p>
     </div>
     <div style="text-align: center;">
-        <img src="/Users/karolinakulis/Desktop/uro/closed.jpeg" alt="Pudełko nr 3" width="150" onclick="revealGift(3)">
+        <img src="closed.jpeg" alt="Pudełko nr 3" width="150" onclick="revealGift(3)">
         <p>Pudełko nr 3</p>
     </div>
     <div style="text-align: center;">
-        <img src="/Users/karolinakulis/Desktop/uro/closed.jpeg" alt="Pudełko nr 4" width="150" onclick="revealGift(4)">
+        <img src="closed.jpeg" alt="Pudełko nr 4" width="150" onclick="revealGift(4)">
         <p>Pudełko nr 4</p>
     </div>
     <div style="text-align: center;">
-        <img src="/Users/karolinakulis/Desktop/uro/closed.jpeg" alt="Pudełko nr 5" width="150" onclick="revealGift(5)">
+        <img src="closed.jpeg" alt="Pudełko nr 5" width="150" onclick="revealGift(5)">
         <p>Pudełko nr 5</p>
     </div>
 </div>
@@ -41,15 +41,15 @@
     function revealGift(pudelko) {
         var giftDisplay = document.getElementById('giftDisplay');
         if (pudelko === 1) {
-            giftDisplay.innerHTML = '<img src="/Users/karolinakulis/Desktop/uro/opened.jpeg" alt="Prezent 1" width="200">';
+            giftDisplay.innerHTML = '<img src="opened.jpeg" alt="Prezent 1" width="200">';
         } else if (pudelko === 2) {
-            giftDisplay.innerHTML = '<img src="/Users/karolinakulis/Desktop/uro/opened2.jpeg" alt="Prezent 2" width="200">';
+            giftDisplay.innerHTML = '<img src="opened2.jpeg" alt="Prezent 2" width="200">';
         }         else if (pudelko === 3) {
-            giftDisplay.innerHTML = '<img src="/Users/karolinakulis/Desktop/uro/opened3.jpeg" alt="Prezent 3" width="200">';
+            giftDisplay.innerHTML = '<img src="opened3.jpeg" alt="Prezent 3" width="200">';
         }        else if (pudelko === 5) {
-            giftDisplay.innerHTML = '<img src="/Users/karolinakulis/Desktop/uro/opened4.jpeg" alt="Prezent 5" width="200">';
+            giftDisplay.innerHTML = '<img src="opened4.jpeg" alt="Prezent 5" width="200">';
         } else if (pudelko === 4) {
-            var gifContainer = '<img src="/Users/karolinakulis/Desktop/uro/pedro.gif" alt="Prezent 4" width="200">';
+            var gifContainer = '<img src="pedro.gif" alt="Prezent 4" width="200">';
             giftDisplay.innerHTML = gifContainer;
             // Zmieniamy kolor napisu PEDRO co sekundę
             setInterval(function() {
