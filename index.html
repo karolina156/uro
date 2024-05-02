@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HEPI 26</title>
+<style>
+    h1 {
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<h1>Znajdz niespodzianke!</h1>
+
+<div style="display: flex; justify-content: space-around;">
+    <div style="text-align: center;">
+        <img src="/Users/karolinakulis/Desktop/uro/closed.jpeg" alt="Pudełko nr 1" width="150" onclick="revealGift(1)">
+        <p>Pudełko nr 1</p>
+    </div>
+    <div style="text-align: center;">
+        <img src="/Users/karolinakulis/Desktop/uro/closed.jpeg" alt="Pudełko nr 2" width="150" onclick="revealGift(2)">
+        <p>Pudełko nr 2</p>
+    </div>
+    <div style="text-align: center;">
+        <img src="/Users/karolinakulis/Desktop/uro/closed.jpeg" alt="Pudełko nr 3" width="150" onclick="revealGift(3)">
+        <p>Pudełko nr 3</p>
+    </div>
+    <div style="text-align: center;">
+        <img src="/Users/karolinakulis/Desktop/uro/closed.jpeg" alt="Pudełko nr 4" width="150" onclick="revealGift(4)">
+        <p>Pudełko nr 4</p>
+    </div>
+    <div style="text-align: center;">
+        <img src="/Users/karolinakulis/Desktop/uro/closed.jpeg" alt="Pudełko nr 5" width="150" onclick="revealGift(5)">
+        <p>Pudełko nr 5</p>
+    </div>
+</div>
+<div id="giftDisplay" style="text-align: center;"></div>
+<script>
+    function revealGift(pudelko) {
+        var giftDisplay = document.getElementById('giftDisplay');
+        if (pudelko === 1) {
+            giftDisplay.innerHTML = '<img src="/Users/karolinakulis/Desktop/uro/opened.jpeg" alt="Prezent 1" width="200">';
+        } else if (pudelko === 2) {
+            giftDisplay.innerHTML = '<img src="/Users/karolinakulis/Desktop/uro/opened2.jpeg" alt="Prezent 2" width="200">';
+        }         else if (pudelko === 3) {
+            giftDisplay.innerHTML = '<img src="/Users/karolinakulis/Desktop/uro/opened3.jpeg" alt="Prezent 3" width="200">';
+        }        else if (pudelko === 5) {
+            giftDisplay.innerHTML = '<img src="/Users/karolinakulis/Desktop/uro/opened4.jpeg" alt="Prezent 5" width="200">';
+        } else if (pudelko === 4) {
+            var gifContainer = '<img src="/Users/karolinakulis/Desktop/uro/pedro.gif" alt="Prezent 4" width="200">';
+            giftDisplay.innerHTML = gifContainer;
+            // Zmieniamy kolor napisu PEDRO co sekundę
+            setInterval(function() {
+                var randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16); // Generujemy losowy kolor w formacie HEX
+                var pedroText = document.createElement('div');
+                pedroText.textContent = 'PEDRO';
+                pedroText.style.position = 'absolute';
+                pedroText.style.left = Math.random() * (window.innerWidth - 100) + 'px';
+                pedroText.style.top = Math.random() * (window.innerHeight - 100) + 'px';
+                pedroText.style.color = randomColor; // Ustawiamy losowy kolor napisu
+                document.body.appendChild(pedroText);
+            }, 1000);
+        }
+    }
+</script>
